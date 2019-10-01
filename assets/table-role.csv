@@ -1,0 +1,15 @@
+id,role_id,client_id,role_name
+0,1,2015,Manager
+1,2,54,Manager
+2,3,231,Manager
+3,4,229,Manager
+4,5,52,Manager
+5,6,39,Manager
+6,7,56,Manager
+7,8,2011,Manager
+8,9,60,Manager
+9,10,58,Manager
+10,11,48,Manager
+11,12,1780,Master
+12,13,1780,Worker
+13,14,2011,Worker
