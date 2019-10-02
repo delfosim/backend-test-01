@@ -2,11 +2,11 @@
 # Desafio Backend Delfos IM
 
 Olá, obrigado pelo seu interesse em participar de nossa equipe.
-A *Delfos Intelligent Maintenance* está sempre buscando por colaboradores dedicados, que amem o que fazem e que sejam capacitados. Por isso, gostariamos que você fizesse este pequeno teste, para podermos te conhecer melhor como profissional!
+A *Delfos Intelligent Maintenance* está sempre buscando por colaboradores dedicados, que amem o que fazem e que sejam capacitados. Por isso, gostaríamos que você fizesse este pequeno teste para podermos te conhecer melhor como profissional!
 
 ## Sobre o Desafio
 Como backender desejamos que você seja capaz de obter dados de múltiplas fontes, sendo capaz de conformá-los para as mais diversas aplicações da empresa.
-Para este desafio você deve realizar aos dois testes abaixo:
+Para este desafio você deve realizar os dois testes abaixo:
 
 ## Primeiro Teste
 Utilizando linguagens, frameworks e qualquer outra ferramenta de sua escolha forneça uma (ou mais de uma) *Interface de Programação de Aplicativos* (API) que consuma dados das duas fontes listadas na seção abaixo e forneça rotas como às especificadas na mesma seção.
@@ -18,10 +18,10 @@ Utilizando linguagens, frameworks e qualquer outra ferramenta de sua escolha for
 - Em caso de **perda de conexão** com a fonte de dados, ou quaisquer outros tipos de falha, a API deve ser capaz de **restabelecer a conexão** de forma automática.
 
 #### Input de Dados
-Como dito acima, existem duas fontes de dados com as quais a API deve trabalhar, você está livre para prover estes dados à ela da maneira que desejar (armazenando em um banco de dados seja relacional ou seja não relacional, salvando os arquivos internamente na API ou de qualquer outro modo que ache melhor), faça o download utilizando os links abaixo, ou baixando diretamente das pastas deste repositório:
+Como citado acima, existem duas fontes de dados com as quais a API deve trabalhar, você está livre para prover estes dados à ela da maneira que desejar (armazenando em um banco de dados seja relacional ou seja não relacional, salvando os arquivos internamente na API ou de qualquer outro modo que ache melhor), faça o download utilizando os links abaixo, ou baixando diretamente das pastas deste repositório:
 
 >**Dados de Controle de Usuários**:
->Estes dados possuem informações de controle e gerenciamento de usuário. Várias empresas clientes fictícias estão registradas neles, com seus respectivos usuários, também fictícios, registrados, cada um possuindo alguma posição a ser desempenhada na empresa. As informações aqui contidas são responsáveis por coordenar quais seções (funcionalidades) das nossas aplicações estão disponíveis para quais empresas clientes, e quais usuários destas empresas possuem acesso às seções.
+>Estes dados possuem informações de controle e gerenciamento de usuário. Várias empresas clientes fictícios estão registradas neles, com seus respectivos usuários, também fictícios, registrados, cada um possuindo alguma posição a ser desempenhada na empresa. As informações aqui contidas são responsáveis por coordenar quais seções (funcionalidades) das nossas aplicações estão disponíveis para quais empresas clientes, e quais usuários destas empresas possuem acesso às seções.
 
 [Client](./assets/client.csv) - Dados sobre as empresas clientes;
 [User](./assets/user.csv) - Dados sobre os usuários que trabalham nestas empresas;
