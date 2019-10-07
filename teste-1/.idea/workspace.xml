@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b88c0ed9-78a3-4173-9f76-b6f4ad50a116" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delfos_sim/populate_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delfos_sim/api_source/serializers/user_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delfos_sim/api_source/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delfos_sim/api_source/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/delfos_sim/api_source/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delfos_sim/delfos_sim/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/delfos_sim/delfos_sim/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,89 +26,101 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="19" />
-          <entry key="py" value="24" />
+          <entry key="py" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="24" />
+          <entry key="Python" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="149" />
-          <entry key="py" value="3457" />
+          <entry key="py" value="3771" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3606" />
+          <entry key="Python" value="3920" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/user.csv">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="62" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="62" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/delfos_sim/populate_db.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="134">
-                  <caret line="39" column="15" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/module-role.csv">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="231">
-                  <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
-                  <folding>
-                    <marker date="1570406380003" expanded="true" signature="86:91" ph="..." />
-                    <marker date="1570406380003" expanded="true" signature="656:657" ph="..." />
-                    <marker date="1570406380003" expanded="true" signature="682:683" ph="..." />
-                    <marker date="1570406380003" expanded="true" signature="682:1046" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/user.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="62" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="36" column="6" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
+              <folding>
+                <marker date="1570406380003" expanded="true" signature="86:91" ph="..." />
+                <marker date="1570406380003" expanded="true" signature="656:657" ph="..." />
+                <marker date="1570406380003" expanded="true" signature="682:683" ph="..." />
+                <marker date="1570406380003" expanded="true" signature="682:1046" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/serializers/user_serializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <marker date="1570407876688" expanded="true" signature="126:193" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delfos_sim/delfos_sim/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="48" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,6 +141,7 @@
       <find>Module</find>
       <find>int</find>
       <find>role_id</find>
+      <find>is</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,10 +150,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py" />
         <option value="$PROJECT_DIR$/delfos_sim/api_source/admin.py" />
-        <option value="$PROJECT_DIR$/delfos_sim/populate_db.py" />
         <option value="$PROJECT_DIR$/delfos_sim/api_source/models.py" />
+        <option value="$PROJECT_DIR$/delfos_sim/populate_db.py" />
+        <option value="$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py" />
+        <option value="$PROJECT_DIR$/delfos_sim/api_source/serializers/user_serializer.py" />
+        <option value="$PROJECT_DIR$/delfos_sim/api_source/urls.py" />
+        <option value="$PROJECT_DIR$/delfos_sim/delfos_sim/urls.py" />
+        <option value="$PROJECT_DIR$/delfos_sim/api_source/views.py" />
       </list>
     </option>
   </component>
@@ -162,6 +183,18 @@
             <path>
               <item name="teste-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="teste-1" type="462c0819:PsiDirectoryNode" />
+              <item name="delfos_sim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teste-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teste-1" type="462c0819:PsiDirectoryNode" />
+              <item name="delfos_sim" type="462c0819:PsiDirectoryNode" />
+              <item name="api_source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teste-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teste-1" type="462c0819:PsiDirectoryNode" />
+              <item name="delfos_sim" type="462c0819:PsiDirectoryNode" />
               <item name="delfos_sim" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -265,15 +298,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49748743" visible="true" weight="0.19063005" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49748743" visible="true" weight="0.19063005" />
       <window_info id="Structure" order="1" sideWeight="0.5025126" side_tool="true" weight="0.19063005" />
       <window_info anchor="bottom" id="Version Control" weight="0.32996634" />
       <window_info anchor="bottom" id="Python Console" weight="0.32996634" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32996634" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32996634" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32996634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32996634" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3956229" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -314,16 +347,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="270" column="38" selection-start-line="270" selection-start-column="34" selection-end-line="270" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delfos_sim/delfos_sim/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -378,20 +401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/user.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="62" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/module.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -405,25 +414,80 @@
     <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/module-role.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/data_info/user.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="62" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/delfos_sim/populate_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+        <state relative-caret-position="1077">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/delfos_sim/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+        <state relative-caret-position="135">
+          <caret line="36" column="6" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="6" />
           <folding>
             <marker date="1570406380003" expanded="true" signature="86:91" ph="..." />
             <marker date="1570406380003" expanded="true" signature="656:657" ph="..." />
             <marker date="1570406380003" expanded="true" signature="682:683" ph="..." />
             <marker date="1570406380003" expanded="true" signature="682:1046" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/delfos_sim/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/serializers/user_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1570407876688" expanded="true" signature="126:193" ph="..." />
           </folding>
         </state>
       </provider>
