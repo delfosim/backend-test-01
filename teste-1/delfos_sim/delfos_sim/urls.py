@@ -20,5 +20,4 @@ from api_source import urls as api_source_url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(api_source_url))
-
 ]

@@ -93,6 +93,6 @@ with open(file_path, newline='') as csvfile:
         if spamreader.line_num != 1:
             module = Module.objects.get(pk=row[2])
             module_role = ModuleRole(id=row[0], role_id=row[1], module_id=module)
-            module.save()
+            module_role.save()
 
 print('Importado Module Role')
