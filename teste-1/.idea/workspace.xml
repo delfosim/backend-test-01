@@ -25,12 +25,13 @@
           <entry key="csv" value="23" />
           <entry key="json" value="1" />
           <entry key="py" value="46" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="PLAIN_TEXT" value="25" />
           <entry key="Python" value="46" />
         </counts>
       </usages-collector>
@@ -38,10 +39,12 @@
         <counts>
           <entry key="Python Console" value="518" />
           <entry key="py" value="5714" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="6232" />
         </counts>
       </usages-collector>
@@ -70,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delfos_sim/api_source/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -80,6 +83,11 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -145,6 +153,7 @@
         <option value="$PROJECT_DIR$/delfos_sim/api_source/serializers/module_serializer.py" />
         <option value="$PROJECT_DIR$/delfos_sim/api_source/urls.py" />
         <option value="$PROJECT_DIR$/delfos_sim/api_source/views.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -166,11 +175,6 @@
             <path>
               <item name="teste-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="teste-1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teste-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teste-1" type="462c0819:PsiDirectoryNode" />
-              <item name="delfos_sim" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -484,6 +488,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
