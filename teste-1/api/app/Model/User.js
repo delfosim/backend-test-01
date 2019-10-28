@@ -8,6 +8,26 @@ class User extends Lucid {
         return 'user'
     }
 
+    static get incrementing() {
+    	return false
+    }
+
+    static get primaryKey() {
+    	return 'id'
+    }
+
+    static get createdAtColumn() {
+    	return null
+    }
+
+    static get updatedAtColumn() {
+    	return null
+    }
+
+    static get deleteTimestamp() {
+        return null
+    }
+
 	client() {
 		return this.belongsTo('App/Model/Client', 'id', 'client_id')
 	}

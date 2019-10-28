@@ -20,6 +20,8 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.resource('users', 'UserController')
+Route.resource('clients', 'ClientController')
+
 
 //Route.get('/users', 'UserController.index')
 

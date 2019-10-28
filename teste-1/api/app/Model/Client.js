@@ -16,12 +16,16 @@ class Client extends Lucid {
     	return 'client_id'
     }
 
-    static get createdAtColumn {
+    static get createdAtColumn() {
     	return null
     }
 
-    static get updatedAtColumn {
+    static get updatedAtColumn() {
     	return null
+    }
+
+    static get deleteTimestamp() {
+        return null
     }
 }
 

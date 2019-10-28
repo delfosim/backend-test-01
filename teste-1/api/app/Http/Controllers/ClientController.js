@@ -1,23 +1,22 @@
 'use strict'
 
-class UserController {
+class ClientController {
 
   static get inject() {
     return [
-      'App/Model/User'
+      'App/Model/Client'
     ]
   }
 
-  constructor(User) {
-    this.User = User
+  constructor(Client) {
+    this.Client = Client
   }
 
   * index(request, response) {
-    // const user = yield this.User.all()
-    const user = yield this.User.query().with('client')
+    const client = yield this.Client.all()
 
     response.json({
-      user
+      client
     })
   }
 
@@ -47,4 +46,4 @@ class UserController {
 
 }
 
-module.exports = UserController
+module.exports = ClientController
