@@ -4,7 +4,8 @@
 
 ## Explicando a arquitetura acima pela minha visão
 
-![alt text] Existem os nós sensores, que é neles que ficam acoplados os sensores, esse nós podem ser alimentados por baterias pequenas carregadas por placas de energia fotovoltaica ou de outra forma. Esse nós enviam os dados coletados para um nó coordenador, que tem o papel de salvar as informações no banco de dados, via alguma API utilizando algum protocolo UDP, CoAP. Após a coletado de dados e as informações dos sensores estarem salvas no banco de dados, podemos desenvolver uma API, que irá disponibilizar as informações coletadas. Com a API desenvolvida podemos desenvolver uma interface Web ou um aplicativo que irá consumir esses dados e exibi-los.
+Existem os nós sensores, que é neles que ficam acoplados os sensores, esse nós podem ser alimentados por baterias pequenas carregadas por placas de energia fotovoltaica ou de outra forma. Esse nós enviam os dados coletados para um nó coordenador, que tem o papel de salvar as informações no banco de dados, via alguma API utilizando algum protocolo UDP, CoAP. Após a coletado de dados e as informações dos sensores estarem salvas no banco de dados, podemos desenvolver uma API, que irá disponibilizar as informações coletadas. Com a API desenvolvida podemos desenvolver uma interface Web ou um aplicativo que irá consumir esses dados e exibi-los.
+O back-end pode ser feito utilizando o nodejs, para o front-end podemos utilizar angular, react ou vue, e para o banco de dados podemos usar bancos relacionais (MySQL) ou NoSQL (MongoDB)
 
 ## Explicando a arquitetura acima pela visão do artigo (Internet of Things for Smart Cities)
 
