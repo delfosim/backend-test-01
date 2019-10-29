@@ -1,8 +1,22 @@
 'use strict'
 
+/** @type {import('@adonisjs/framework/src/Env')} */
 const Env = use('Env')
 
 module.exports = {
+
+  /*
+  |--------------------------------------------------------------------------
+  | Application Name
+  |--------------------------------------------------------------------------
+  |
+  | This value is the name of your application and can be used when you
+  | need to place the application's name in a email, view or
+  | other location.
+  |
+  */
+
+  name: Env.get('APP_NAME', 'AdonisJs'),
 
   /*
   |--------------------------------------------------------------------------
@@ -13,23 +27,7 @@ module.exports = {
   | to encrypted cookies, sessions and other sensitive data.
   |
   */
-  appKey: Env.get('APP_KEY'),
-
-  encryption: {
-    /*
-    |--------------------------------------------------------------------------
-    | Encryption algorithm
-    |--------------------------------------------------------------------------
-    |
-    | Encryption algorithm defines the algorithm to be used while encrypting
-    | values. Under the hood adonis makes of node-crypto.
-    |
-    | aes-256-cbc requires 32 characters long string
-    | aes-128-cbc requires 16 characters long string
-    |
-    */
-    algorithm: 'aes-256-cbc'
-  },
+  appKey: Env.getOrFail('APP_KEY'),
 
   http: {
     /*
@@ -37,7 +35,7 @@ module.exports = {
     | Allow Method Spoofing
     |--------------------------------------------------------------------------
     |
-    | Method spoofing allows to make requests by spoofing the http verb.
+    | Method spoofing allows you to make requests by spoofing the http verb.
     | Which means you can make a GET request but instruct the server to
     | treat as a POST or PUT request. If you want this feature, set the
     | below value to true.
@@ -50,10 +48,10 @@ module.exports = {
     | Trust Proxy
     |--------------------------------------------------------------------------
     |
-    | Trust proxy defines whether X-Forwaded-* headers should be trusted or not.
+    | Trust proxy defines whether X-Forwarded-* headers should be trusted or not.
     | When your application is behind a proxy server like nginx, these values
     | are set automatically and should be trusted. Apart from setting it
-    | to true or false Adonis supports handful or ways to allow proxy
+    | to true or false Adonis supports a handful of ways to allow proxy
     | values. Read documentation for that.
     |
     */
@@ -64,7 +62,7 @@ module.exports = {
     | Subdomains
     |--------------------------------------------------------------------------
     |
-    | Offset to be used for returning subdomains for a given request.For
+    | Offset to be used for returning subdomains for a given request. For
     | majority of applications it will be 2, until you have nested
     | sudomains.
     | cheatsheet.adonisjs.com      - offset - 2
@@ -75,17 +73,6 @@ module.exports = {
 
     /*
     |--------------------------------------------------------------------------
-    | Set Powered By
-    |--------------------------------------------------------------------------
-    |
-    | Adonis will set response header X-Powered-By if below value is set to
-    | true. Consider this as a way of saying thanks to us.
-    |
-    */
-    setPoweredBy: true,
-
-    /*
-    |--------------------------------------------------------------------------
     | JSONP Callback
     |--------------------------------------------------------------------------
     |
@@ -93,7 +80,21 @@ module.exports = {
     | in request url.
     |
     */
-    jsonpCallback: 'callback'
+    jsonpCallback: 'callback',
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Etag
+    |--------------------------------------------------------------------------
+    |
+    | Set etag on all HTTP responses. In order to disable for selected routes,
+    | you can call the `response.send` with an options object as follows.
+    |
+    | response.send('Hello', { ignoreEtag: true })
+    |
+    */
+    etag: false
   },
 
   views: {
@@ -106,18 +107,7 @@ module.exports = {
     | production to optimize view loading time.
     |
     */
-    cache: Env.get('CACHE_VIEWS', true),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Service Injection
-    |--------------------------------------------------------------------------
-    |
-    | Inside your nunjucks views, you can inject models, services etc using
-    | IoC container. Setting it to false will disable this feature.
-    |
-    */
-    injectServices: true
+    cache: Env.get('CACHE_VIEWS', true)
   },
 
   static: {
@@ -126,9 +116,9 @@ module.exports = {
     | Dot Files
     |--------------------------------------------------------------------------
     |
-    | Define how to treat dot files when trying to server static resources.
+    | Define how to treat dot files when trying to serve static resources.
     | By default it is set to ignore, which will pretend that dotfiles
-    | does not exists.
+    | do not exist.
     |
     | Can be one of the following
     | ignore, deny, allow
@@ -162,16 +152,16 @@ module.exports = {
   locales: {
     /*
     |--------------------------------------------------------------------------
-    | Driver
+    | Loader
     |--------------------------------------------------------------------------
     |
-    | The driver to be used for fetching and updating locales. Below is the
+    | The loader to be used for fetching and updating locales. Below is the
     | list of available options.
     |
     | file, database
     |
     */
-    driver: 'file',
+    loader: 'file',
 
     /*
     |--------------------------------------------------------------------------
@@ -183,16 +173,71 @@ module.exports = {
     | based on HTTP headers/query string.
     |
     */
-    locale: 'en',
+    locale: 'en'
+  },
+
+  logger: {
+    /*
+    |--------------------------------------------------------------------------
+    | Transport
+    |--------------------------------------------------------------------------
+    |
+    | Transport to be used for logging messages. You can have multiple
+    | transports using same driver.
+    |
+    | Available drivers are: `file` and `console`.
+    |
+    */
+    transport: 'console',
 
     /*
     |--------------------------------------------------------------------------
-    | Fallback Locale
+    | Console Transport
     |--------------------------------------------------------------------------
     |
-    | Fallback locale to be used when actual locale is not supported.
+    | Using `console` driver for logging. This driver writes to `stdout`
+    | and `stderr`
     |
     */
-    fallbackLocale: 'en'
+    console: {
+      driver: 'console',
+      name: 'adonis-app',
+      level: 'info'
+    },
+
+    /*
+    |--------------------------------------------------------------------------
+    | File Transport
+    |--------------------------------------------------------------------------
+    |
+    | File transport uses file driver and writes log messages for a given
+    | file inside `tmp` directory for your app.
+    |
+    | For a different directory, set an absolute path for the filename.
+    |
+    */
+    file: {
+      driver: 'file',
+      name: 'adonis-app',
+      filename: 'adonis.log',
+      level: 'info'
+    }
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | Generic Cookie Options
+  |--------------------------------------------------------------------------
+  |
+  | The following cookie options are generic settings used by AdonisJs to create
+  | cookies. However, some parts of the application like `sessions` can have
+  | seperate settings for cookies inside `config/session.js`.
+  |
+  */
+  cookie: {
+    httpOnly: true,
+    sameSite: false,
+    path: '/',
+    maxAge: 7200
   }
 }

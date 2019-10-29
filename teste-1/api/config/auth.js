@@ -1,36 +1,35 @@
 'use strict'
 
-const Config = use('Config')
+/** @type {import('@adonisjs/framework/src/Env')} */
+const Env = use('Env')
 
 module.exports = {
-
   /*
   |--------------------------------------------------------------------------
   | Authenticator
   |--------------------------------------------------------------------------
   |
-  | Authenticator is a combination of HTTP Authentication scheme and the
-  | serializer to be used for retrieving users. Below is the default
-  | authenticator to be used for every request.
+  | Authentication is a combination of serializer and scheme with extra
+  | config to define on how to authenticate a user.
   |
   | Available Schemes - basic, session, jwt, api
-  | Available Serializers - Lucid, Database
+  | Available Serializers - lucid, database
   |
   */
   authenticator: 'session',
 
   /*
   |--------------------------------------------------------------------------
-  | Session Authenticator
+  | Session
   |--------------------------------------------------------------------------
   |
-  | Session authenticator will make use of sessions to maintain the login
-  | state for a given user.
+  | Session authenticator makes use of sessions to authenticate a user.
+  | Session authentication is always persistent.
   |
   */
   session: {
-    serializer: 'Lucid',
-    model: 'App/Model/User',
+    serializer: 'lucid',
+    model: 'App/Models/User',
     scheme: 'session',
     uid: 'email',
     password: 'password'
@@ -38,15 +37,20 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | Basic Auth Authenticator
+  | Basic Auth
   |--------------------------------------------------------------------------
   |
-  | Basic Authentication works on Http Basic auth header.
+  | The basic auth authenticator uses basic auth header to authenticate a
+  | user.
+  |
+  | NOTE:
+  | This scheme is not persistent and users are supposed to pass
+  | login credentials on each request.
   |
   */
   basic: {
-    serializer: 'Lucid',
-    model: 'App/Model/User',
+    serializer: 'lucid',
+    model: 'App/Models/User',
     scheme: 'basic',
     uid: 'email',
     password: 'password'
@@ -54,38 +58,37 @@ module.exports = {
 
   /*
   |--------------------------------------------------------------------------
-  | JWT Authenticator
+  | Jwt
   |--------------------------------------------------------------------------
   |
-  | Jwt authentication works with a payload sent with every request under
-  | Http Authorization header.
+  | The jwt authenticator works by passing a jwt token on each HTTP request
+  | via HTTP `Authorization` header.
   |
   */
   jwt: {
-    serializer: 'Lucid',
-    model: 'App/Model/User',
+    serializer: 'lucid',
+    model: 'App/Models/User',
     scheme: 'jwt',
     uid: 'email',
     password: 'password',
-    secret: Config.get('app.appKey')
+    options: {
+      secret: Env.get('APP_KEY')
+    }
   },
 
   /*
   |--------------------------------------------------------------------------
-  | API Authenticator
+  | Api
   |--------------------------------------------------------------------------
   |
-  | Api authenticator authenticates are requests based on Authorization
-  | header.
-  |
-  | Make sure to define relationships on User and Token model as defined
-  | in documentation
+  | The Api scheme makes use of API personal tokens to authenticate a user.
   |
   */
   api: {
-    serializer: 'Lucid',
-    model: 'App/Model/Token',
-    scheme: 'api'
+    serializer: 'lucid',
+    model: 'App/Models/User',
+    scheme: 'api',
+    uid: 'email',
+    password: 'password'
   }
-
 }

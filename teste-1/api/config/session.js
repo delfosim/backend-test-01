@@ -1,5 +1,6 @@
 'use strict'
 
+/** @type {import('@adonisjs/framework/src/Env')} */
 const Env = use('Env')
 
 module.exports = {
@@ -8,11 +9,11 @@ module.exports = {
   | Session Driver
   |--------------------------------------------------------------------------
   |
-  | Cookie driver will save session on cookies, but make sure to setup
-  | APP_KEY inside .env file to keep cookies encrypted and signed.
+  | The session driver to be used for storing session values. It can be
+  | cookie, file or redis.
   |
-  | Available Options are :-
-  | cookie, file, redis
+  | For `redis` driver, make sure to install and register `@adonisjs/redis`
+  |
   */
   driver: Env.get('SESSION_DRIVER', 'cookie'),
 
@@ -21,124 +22,80 @@ module.exports = {
   | Cookie Name
   |--------------------------------------------------------------------------
   |
-  | Cookie name defines the name of key to used for saving session cookie.
-  | Cookie name is required even if you are not using cookie driver.
+  | The name of the cookie to be used for saving session id. Session ids
+  | are signed and encrypted.
   |
   */
-  cookie: 'adonis-session',
+  cookieName: 'adonis-session',
 
-  
   /*
   |--------------------------------------------------------------------------
-  | Redis options
+  | Clear session when browser closes
   |--------------------------------------------------------------------------
   |
-  | When using redis driver, configure the connection options here.
-  | see https://github.com/adonisjs/adonis-redis for more configuration options.
-  | Clustering is not supported for sessions.
+  | If this value is true, the session cookie will be temporary and will be
+  | removed when browser closes.
   |
-  | You can also supply a redis connection string like so:
-  | redis: Env.get('REDIS_URL', 'redis://localhost:6379')
   */
-  redis: {
-    port: 6379,          // Redis port
-    host: '127.0.0.1',   // Redis host
-    family: 4,           // 4 (IPv4) or 6 (IPv6)
-    password: 'auth',
-    db: 0
+  clearWithBrowser: true,
+
+  /*
+  |--------------------------------------------------------------------------
+  | Session age
+  |--------------------------------------------------------------------------
+  |
+  | This value is only used when `clearWithBrowser` is set to false. The
+  | age must be a valid https://npmjs.org/package/ms string or should
+  | be in milliseconds.
+  |
+  | Valid values are:
+  |  '2h', '10d', '5y', '2.5 hrs'
+  |
+  */
+  age: '2h',
+
+  /*
+  |--------------------------------------------------------------------------
+  | Cookie options
+  |--------------------------------------------------------------------------
+  |
+  | Cookie options defines the options to be used for setting up session
+  | cookie
+  |
+  */
+  cookie: {
+    httpOnly: true,
+    sameSite: false,
+    path: '/'
   },
 
-  
   /*
   |--------------------------------------------------------------------------
-  | Session Age
+  | Sessions location
   |--------------------------------------------------------------------------
   |
-  | Define session life in minutes. Session will be destroyed after defined
-  | minutes of inactivity.
-  |
-  */
-  age: 120,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Clear on browser close
-  |--------------------------------------------------------------------------
-  |
-  | You can make your sessions to be removed once browser has been closed/killed
-  | by setting below value to true. Also it will disregard age parameter.
-  |
-  */
-  clearWithBrowser: false,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Http Only Cookie
-  |--------------------------------------------------------------------------
-  |
-  | Keep cookie http only, which means javascript cannot access the cookie
-  | by document.cookie.
-  |
-  */
-  httpOnly: true,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Same site only
-  |--------------------------------------------------------------------------
-  |
-  | Keep cookie accessible from the same domain. Available values are
-  | true, false, lax and strict.
-  | https://tools.ietf.org/html/draft-west-first-party-cookies-07
-  |
-  */
-  sameSite: true,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Domain
-  |--------------------------------------------------------------------------
-  |
-  | Set domain for session cookie. If not defined it will be set to current
-  | domain. For single and subdomains use. ".adonisjs.com"
-  |
-  */
-  domain: null,
-
-  /*
-  |--------------------------------------------------------------------------
-  | Path
-  |--------------------------------------------------------------------------
-  |
-  | Path defines where the session will be available. If you want to access
-  | it anywhere on your website. Set it to /
-  |
-  */
-  path: '/',
-
-  /*
-  |--------------------------------------------------------------------------
-  | Secure
-  |--------------------------------------------------------------------------
-  |
-  | Define whether to keep session cookie secure or not. Secured cookies
-  | are only served over HTTPS.
-  |
-  */
-  secure: false,
-
-  /*
-  |--------------------------------------------------------------------------
-  | File Driver Config
-  |--------------------------------------------------------------------------
-  |
-  | Here we define settings for file driver. For now we define directory
-  | in which we want to store our sessions. Defined directory will be
-  | created inside storage directory.
+  | If driver is set to file, we need to define the relative location from
+  | the temporary path or absolute url to any location.
   |
   */
   file: {
-    directory: 'sessions'
-  }
+    location: 'sessions'
+  },
 
+  /*
+  |--------------------------------------------------------------------------
+  | Redis config
+  |--------------------------------------------------------------------------
+  |
+  | The configuration for the redis driver. By default we reference it from
+  | the redis file. But you are free to define an object here too.
+  |
+  */
+  redis: {
+    host: '127.0.0.1',
+    port: 6379,
+    password: null,
+    db: 0,
+    keyPrefix: ''
+  }
 }
