@@ -7,6 +7,8 @@
 /**
  * Resourceful controller for interacting with users
  */
+const Logger = use('Logger')
+
 class UserController {
 
   static get inject() {
@@ -56,10 +58,13 @@ class UserController {
             })
         }
 
+        
+
         response.json({
             result
         })
     } catch(e) {
+        Logger.error('Erro ao realizar a requisição: ' + request.url() + ' Motivo: ' + e.message)
         response.status(500).json(e.message)
     }
   }

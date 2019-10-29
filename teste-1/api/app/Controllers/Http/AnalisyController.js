@@ -7,6 +7,9 @@
 /**
  * Resourceful controller for interacting with analisies
  */
+
+const Logger = use('Logger')
+
 class AnalisyController {
 
   static get inject() {
@@ -29,36 +32,41 @@ class AnalisyController {
    * @param {View} ctx.view
    */
   async index ({ request, response, view }) {
-    var analisys = await this.Analisy.all()
+    try {
+      var analisys = await this.Analisy.all()
 
-    var chart = []
-    var table = []
-    var result = []
-    for (let x in analisys.rows) {
-      var analisy = analisys.rows[x]
+      var chart = []
+      var table = []
+      var result = []
+      for (let x in analisys.rows) {
+        var analisy = analisys.rows[x]
 
-      chart.push({
-        name: "var_" + analisy.id,
-        data: [analisy.sample_time, analisy.value]
+        chart.push({
+          name: "var_" + analisy.id,
+          data: [analisy.sample_time, analisy.value]
+        })
+
+        table.push({
+          var: "var_" + analisy.id,
+          sample_time: analisy.sample_time,
+          value: analisy.value,
+        })
+      }
+
+      result.push({
+          1: {
+            chart
+          },
+          table
       })
 
-      table.push({
-        var: "var_" + analisy.id,
-        sample_time: analisy.sample_time,
-        value: analisy.value,
+      response.json({
+        result
       })
+    } catch(e) {
+        Logger.error('Erro ao realizar a requisição: ' + request.url() + ' Motivo: ' + e.message)
+        response.status(500).json(e.message)
     }
-
-    result.push({
-        1: {
-          chart
-        },
-        table
-    })
-
-    response.json({
-      result
-    })
   }
 
   /**

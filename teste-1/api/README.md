@@ -17,6 +17,10 @@ Instalar o adonis de forma global
 sudo npm i -g @adonisjs/cli
 ```
 
+## Logs
+Diretório: backend-test-01/teste-1/api/tmp/adonis.log
+
+
 ### Necessário
 
 ```js
