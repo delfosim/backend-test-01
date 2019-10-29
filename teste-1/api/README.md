@@ -7,6 +7,7 @@
 5. Executar o comando para a criação do banco de dados e tabelas: adonis migration:run
 6. Executar o comando para incluir os registros nas tabelas criadas: adonis seed --files=DatabaseSeeder.js
 7. Iniciar o servidor: adonis serve --dev
+8. Acesse o endereço: http://localhost:3333
 
 
 ## Importante
