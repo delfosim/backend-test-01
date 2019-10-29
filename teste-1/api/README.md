@@ -1,31 +1,26 @@
-# Adonis fullstack application
+# Instruções
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+1. Clonar o projeto backend-test-01
+2. Entrar no diretorio: cd backend-test-01/teste-1/api
+3. criar o arquivo .env na raiz do projeto (igual ao arquivo .env.example)
+4. Executar o comando para a instalção das dependências: sudo npm install
+5. Executar o comando para a criação do banco de dados e tabelas: adonis migration:run
+6. Executar o comando para incluir os registros nas tabelas criadas: adonis seed --files=DatabaseSeeder.js
+7. Iniciar o servidor: adonis serve --dev
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
 
-## Setup
+## Importante
 
-Use the adonis command to install the blueprint
+Instalar o adonis de forma global
 
 ```bash
-adonis new yardstick
+sudo npm i -g @adonisjs/cli
 ```
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
+### Necessário
 
 ```js
-adonis migration:run
+Node.js >= 8.0.0
+npm >= 3.0.0
+Foi utilizado o sistema operacional Ubuntu 18
 ```
