@@ -7,7 +7,7 @@ Obrigado pela oportunidade de participar do desafio de seleção, abaixo tem uma
 Utilizei o Django (Framework Python), para criar a API do teste 1. 
 ### Deploy no Heroku 
 Decidi por fazer o deploy no Heroku, para que fosse mais fácil visualizar o que foi feito. Mas uma explicação de como executar o código será feita na próxima sessão.
-Deploy da aplicação no Heroku, no link: https://teste1-delfos.herokuapp.com/users/
+Deploy da aplicação no Heroku, no link: https://teste1-delfos.herokuapp.com
 
 ### Preparando o Ambiente
 
