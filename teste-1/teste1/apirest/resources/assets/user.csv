@@ -1,0 +1,14 @@
+id,tpid,client_id,user_name,role_id,user_email,user_phone,user_type,creator_user_id,creation_time,is_confirmed,is_active
+49,bqc26ad6-7f2c-774d-bbc3-3mdkec53c636,2015,user1_client_2015,1,user@company2015.com,966225588,master,,2019-09-23 21:40:42.988472+00,True,True
+50,bqc26ad6-7f2c-774d-bbc3-3mdkec53c637,54,user1_client_54,2,user@company54.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+51,bqc26ad6-7f2c-774d-bbc3-3mdkec53c638,231,user1_client_231,3,user@company231.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+52,bqc26ad6-7f2c-774d-bbc3-3mdkec53c639,229,user1_client_229,4,user@company229.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+53,bqc26ad6-7f2c-774d-bbc3-3mdkec53c640,52,user1_client_52,5,user@company52.com,,master,,2019-09-23 21:40:42.988472+00,True,False
+54,bqc26ad6-7f2c-774d-bbc3-3mdkec53c641,39,user1_client_39,6,user@company39.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+55,bqc26ad6-7f2c-774d-bbc3-3mdkec53c642,56,user1_client_56,7,user@company56.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+56,bqc26ad6-7f2c-774d-bbc3-3mdkec53c643,2011,user1_client_2011,8,user1@company2011.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+57,bqc26ad6-7f2c-774d-bbc3-3mdkec53c644,60,user1_client_60,9,user@company60.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+58,bqc26ad6-7f2c-774d-bbc3-3mdkec53c645,58,user1_client_58,10,user@company58.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+59,bqc26ad6-7f2c-774d-bbc3-3mdkec53c646,48,user1_client_48,11,user@company48.com,,master,,2019-09-23 21:40:42.988472+00,True,True
+63,bqc26ad6-7f2c-774d-bbc3-3mdkec53c647,1780,user1_client_1780,12,user1@company1780.com,999887766,master,,2019-09-25 19:22:06.625607+00,True,True
+64,bqc26ad6-7f2c-774d-bbc3-3mdkec53c648,1780,user2_client_1780,13,user2@company1780.com,,minion,63,2019-09-25 20:31:05.117361+00,True,False
